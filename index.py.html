@@ -1,0 +1,48 @@
+index.py
+#Importar as bibliotecas
+from TKinter import *
+from TKinter import messagebox 
+from TKinter import ttk
+
+#Criar nossa janela
+jan = TK()
+jan.title('#EVE>>> - Acess panel')
+jan.geometry('600x300')
+jan.configure(background='while')
+jan.resizable(width=false,height=false)
+jan.attributes("-alpha", 0.9)
+
+#===== Carregando Imagens ============
+logo = PhotoImage(file="Icons/logo.png")
+
+#===== Widegts ==================
+LeftFrame = Frame(jan, width=200, height=300, bg="MIDNIGHTBLUE", relief="raise")
+LeftFrame.pack(side=LEFT)
+
+Rightframe = Frame(jan, width=395, height=300, bg="MIDNIGHTBLUE", relief="raise")
+Rightframe.pack(side=RIGHT)
+
+LogoLabel = Label(Letframe, image=logo, bg="MIDNIGHTBLUE")
+LogoLabel.place(x=50, y=100)
+
+UserLabel = Label(Rightframe, Text="Username:", font=("Century Gothic", 20), bg="MIDNIGHTBLUE", fg="white")
+UserLabel.place(x=5, y=100)
+
+UserEntry = ttk.Entry(RightFrame, width=30)
+UserEntry.place = (x=150, y=110)
+
+PassLabel = Label(Rightframe, Text="Password:", font=("Century Gothic", 20), bg="MIDNIGHTBLUE", fg="white")
+PassLabel.place(x=5, y=200)
+
+PassEntry = ttk.Entry(RightFrame, width=30)
+PassEntry.place = (x=150, y=220)
+
+#Botoes
+LoginButton = ttk.Button(RightFrame, text="Login", width=30)
+LoginButton.place = (x=100, y=225)
+
+RegisterButton = ttk.Button(RightFrame, text="Register", width=20)
+RegisterButton.place = (x=125, y=260)
+
+
+jan.mainloojan.mainloop()
